@@ -1,0 +1,12 @@
+/home/xalexus/Ackee Blockchain/wsos-calculator/target/release/deps/libthiserror_impl-25fd0a37880b4711.so: /home/xalexus/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.38/src/lib.rs /home/xalexus/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.38/src/ast.rs /home/xalexus/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.38/src/attr.rs /home/xalexus/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.38/src/expand.rs /home/xalexus/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.38/src/fmt.rs /home/xalexus/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.38/src/generics.rs /home/xalexus/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.38/src/prop.rs /home/xalexus/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.38/src/valid.rs
+
+/home/xalexus/Ackee Blockchain/wsos-calculator/target/release/deps/thiserror_impl-25fd0a37880b4711.d: /home/xalexus/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.38/src/lib.rs /home/xalexus/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.38/src/ast.rs /home/xalexus/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.38/src/attr.rs /home/xalexus/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.38/src/expand.rs /home/xalexus/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.38/src/fmt.rs /home/xalexus/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.38/src/generics.rs /home/xalexus/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.38/src/prop.rs /home/xalexus/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.38/src/valid.rs
+
+/home/xalexus/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.38/src/lib.rs:
+/home/xalexus/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.38/src/ast.rs:
+/home/xalexus/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.38/src/attr.rs:
+/home/xalexus/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.38/src/expand.rs:
+/home/xalexus/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.38/src/fmt.rs:
+/home/xalexus/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.38/src/generics.rs:
+/home/xalexus/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.38/src/prop.rs:
+/home/xalexus/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.38/src/valid.rs:
