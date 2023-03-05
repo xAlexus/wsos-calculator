@@ -36,7 +36,7 @@ pub mod calculator {
         Ok({})
     }
 
-    pub fn add(ctx: Context<Addition>, num1: i128, num2: i128) -> ProgramResult {
+    pub fn add(ctx: Context<Operation>, num1: i128, num2: i128) -> ProgramResult {
         let calculator = &mut ctx.accounts.calculator;
         match num1.checked_add(num2) {
             Some(result) => {
@@ -46,7 +46,7 @@ pub mod calculator {
             None => Err(ErrorCode::OverflowUnderflow.into()),
         }
     }
-    pub fn subtract(ctx: Context<Subtraction>, num1: i128, num2: i128) -> ProgramResult {
+    pub fn subtract(ctx: Context<Operation>, num1: i128, num2: i128) -> ProgramResult {
         let calculator = &mut ctx.accounts.calculator;
         match num1.checked_sub(num2) {
             Some(result) => {
@@ -56,7 +56,7 @@ pub mod calculator {
             None => Err(ErrorCode::OverflowUnderflow.into()),
         }
     }
-    pub fn multiply(ctx: Context<Multiplication>, num1: i128, num2: i128) -> ProgramResult {
+    pub fn multiply(ctx: Context<Operation>, num1: i128, num2: i128) -> ProgramResult {
         let calculator = &mut ctx.accounts.calculator;
         match num1.checked_mul(num2) {
             Some(result) => {
@@ -67,7 +67,7 @@ pub mod calculator {
         }
     }
 
-    pub fn divide(ctx: Context<Division>, num1: i128, num2: i128) -> ProgramResult {
+    pub fn divide(ctx: Context<Operation>, num1: i128, num2: i128) -> ProgramResult {
         let calculator = &mut ctx.accounts.calculator;
         if num2 == 0 {
             return Err(ErrorCode::DivisionByZero.into());
@@ -81,7 +81,7 @@ pub mod calculator {
         }
     }
 
-    pub fn power(ctx: Context<Exponentiation>, num1: i128, num2: i128) -> ProgramResult {
+    pub fn power(ctx: Context<Operation>, num1: i128, num2: i128) -> ProgramResult {
         let calculator = &mut ctx.accounts.calculator;
         match num1.checked_pow(num2 as u32) {
             Some(result) => {
@@ -107,33 +107,11 @@ pub struct Create<'info> {
 
 }
 #[derive(Accounts)]
-pub struct Addition<'info> {
+pub struct Operation<'info> {
     #[account(mut)]
     pub calculator: Account<'info, Calculator>,
 }
 
-#[derive(Accounts)]
-pub struct Subtraction<'info> {
-    #[account(mut)]
-    pub calculator: Account<'info, Calculator>,
-}
-
-#[derive(Accounts)]
-pub struct Multiplication<'info> {
-    #[account(mut)]
-    pub calculator: Account<'info, Calculator>,
-}
-
-#[derive(Accounts)]
-pub struct Division<'info> {
-    #[account(mut)]
-    pub calculator: Account<'info, Calculator>,
-}
-#[derive(Accounts)]
-pub struct Exponentiation<'info> {
-    #[account(mut)]
-    pub calculator: Account<'info, Calculator>,
-}
 #[account]
 pub struct Calculator {
     greeting: String,
