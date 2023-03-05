@@ -75,6 +75,7 @@ describe("calculator", () => {
     const account = await program.account.calculator.fetch(calculatorPair.publicKey)
     expect(account.result).to.eql(new anchor.BN(5))
 })
+  //Another test step - test out Exponentiation
 it('power',async () => {
   await program.methods.power(new anchor.BN(2), new anchor.BN(4))
   .accounts({
@@ -84,5 +85,7 @@ it('power',async () => {
   const account = await program.account.calculator.fetch(calculatorPair.publicKey)
   expect(account.result).to.eql(new anchor.BN(16))
 })
+
+
   
 });
