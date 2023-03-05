@@ -85,7 +85,5 @@ it('power',async () => {
   const account = await program.account.calculator.fetch(calculatorPair.publicKey)
   expect(account.result).to.eql(new anchor.BN(16))
 })
-
-
   
 });

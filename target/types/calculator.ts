@@ -146,6 +146,18 @@ export type Calculator = {
         ]
       }
     }
+  ],
+  "errors": [
+    {
+      "code": 6001,
+      "name": "DivisionByZero",
+      "msg": "Division by zero"
+    },
+    {
+      "code": 6002,
+      "name": "OverflowUnderflow",
+      "msg": "Overflow or underflow error"
+    }
   ]
 };
 
@@ -296,6 +308,18 @@ export const IDL: Calculator = {
           }
         ]
       }
+    }
+  ],
+  "errors": [
+    {
+      "code": 6001,
+      "name": "DivisionByZero",
+      "msg": "Division by zero"
+    },
+    {
+      "code": 6002,
+      "name": "OverflowUnderflow",
+      "msg": "Overflow or underflow error"
     }
   ]
 };

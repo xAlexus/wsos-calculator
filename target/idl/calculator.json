@@ -146,5 +146,20 @@
         ]
       }
     }
-  ]
+  ],
+  "errors": [
+    {
+      "code": 6001,
+      "name": "DivisionByZero",
+      "msg": "Division by zero"
+    },
+    {
+      "code": 6002,
+      "name": "OverflowUnderflow",
+      "msg": "Overflow or underflow error"
+    }
+  ],
+  "metadata": {
+    "address": "CsQYgrrqQoSwBUQF8ro7aFJgzyhjpUymbiMBeRFiv4Db"
+  }
 }
