@@ -33,7 +33,7 @@ pub mod calculator {
 
     pub fn divide(ctx: Context<Division>, num1: i128, num2: i128) -> ProgramResult {
         let calculator = &mut ctx.accounts.calculator;
-      //ensure!(num2 != 0, "Cannot divide by zero");
+      //ensure!(num2 != 0, "Cannot divide by zero"); //Dont know how to resolve this issue yet
         calculator.result = num1 / num2;
         Ok(())
     }

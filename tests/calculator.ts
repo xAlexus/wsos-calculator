@@ -44,25 +44,16 @@ describe("calculator", () => {
     const account = await program.account.calculator.fetch(calculatorPair.publicKey)
     expect(account.result).to.eql(new anchor.BN(5))
 })
-  //Another test step - test out addition
-  it('Addition',async () => {
-    await program.methods.add(new anchor.BN(2), new anchor.BN(3))
-    .accounts({
-        calculator: calculatorPair.publicKey,
-    })
-    .rpc()
-    const account = await program.account.calculator.fetch(calculatorPair.publicKey)
-    expect(account.result).to.eql(new anchor.BN(5))
-})
+
   //Another test step - test out subtraction
   it('Subtraction',async () => {
-    await program.methods.subtract(new anchor.BN(2), new anchor.BN(3))
+    await program.methods.subtract(new anchor.BN(5), new anchor.BN(3))
     .accounts({
         calculator: calculatorPair.publicKey,
     })
     .rpc()
     const account = await program.account.calculator.fetch(calculatorPair.publicKey)
-    expect(account.result).to.eql(new anchor.BN(5))
+    expect(account.result).to.eql(new anchor.BN(2))
 })
   //Another test step - test out multiplication
   it('Multiplication',async () => {
@@ -72,17 +63,26 @@ describe("calculator", () => {
     })
     .rpc()
     const account = await program.account.calculator.fetch(calculatorPair.publicKey)
-    expect(account.result).to.eql(new anchor.BN(5))
+    expect(account.result).to.eql(new anchor.BN(6))
 })
   //Another test step - test out division
   it('Division',async () => {
-    await program.methods.divide(new anchor.BN(2), new anchor.BN(3))
+    await program.methods.divide(new anchor.BN(10), new anchor.BN(2))
     .accounts({
         calculator: calculatorPair.publicKey,
     })
     .rpc()
     const account = await program.account.calculator.fetch(calculatorPair.publicKey)
     expect(account.result).to.eql(new anchor.BN(5))
+})
+it('power',async () => {
+  await program.methods.power(new anchor.BN(2), new anchor.BN(4))
+  .accounts({
+      calculator: calculatorPair.publicKey,
+  })
+  .rpc()
+  const account = await program.account.calculator.fetch(calculatorPair.publicKey)
+  expect(account.result).to.eql(new anchor.BN(16))
 })
   
 });
