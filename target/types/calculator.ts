@@ -40,11 +40,71 @@ export type Calculator = {
       "args": [
         {
           "name": "num1",
-          "type": "i64"
+          "type": "i128"
         },
         {
           "name": "num2",
-          "type": "i64"
+          "type": "i128"
+        }
+      ]
+    },
+    {
+      "name": "subtract",
+      "accounts": [
+        {
+          "name": "calculator",
+          "isMut": true,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "num1",
+          "type": "i128"
+        },
+        {
+          "name": "num2",
+          "type": "i128"
+        }
+      ]
+    },
+    {
+      "name": "multiply",
+      "accounts": [
+        {
+          "name": "calculator",
+          "isMut": true,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "num1",
+          "type": "i128"
+        },
+        {
+          "name": "num2",
+          "type": "i128"
+        }
+      ]
+    },
+    {
+      "name": "divide",
+      "accounts": [
+        {
+          "name": "calculator",
+          "isMut": true,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "num1",
+          "type": "i128"
+        },
+        {
+          "name": "num2",
+          "type": "i128"
         }
       ]
     }
@@ -61,7 +121,7 @@ export type Calculator = {
           },
           {
             "name": "result",
-            "type": "i64"
+            "type": "i128"
           }
         ]
       }
@@ -111,11 +171,71 @@ export const IDL: Calculator = {
       "args": [
         {
           "name": "num1",
-          "type": "i64"
+          "type": "i128"
         },
         {
           "name": "num2",
-          "type": "i64"
+          "type": "i128"
+        }
+      ]
+    },
+    {
+      "name": "subtract",
+      "accounts": [
+        {
+          "name": "calculator",
+          "isMut": true,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "num1",
+          "type": "i128"
+        },
+        {
+          "name": "num2",
+          "type": "i128"
+        }
+      ]
+    },
+    {
+      "name": "multiply",
+      "accounts": [
+        {
+          "name": "calculator",
+          "isMut": true,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "num1",
+          "type": "i128"
+        },
+        {
+          "name": "num2",
+          "type": "i128"
+        }
+      ]
+    },
+    {
+      "name": "divide",
+      "accounts": [
+        {
+          "name": "calculator",
+          "isMut": true,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "num1",
+          "type": "i128"
+        },
+        {
+          "name": "num2",
+          "type": "i128"
         }
       ]
     }
@@ -132,7 +252,7 @@ export const IDL: Calculator = {
           },
           {
             "name": "result",
-            "type": "i64"
+            "type": "i128"
           }
         ]
       }

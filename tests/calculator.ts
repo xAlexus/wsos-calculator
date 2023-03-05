@@ -44,5 +44,45 @@ describe("calculator", () => {
     const account = await program.account.calculator.fetch(calculatorPair.publicKey)
     expect(account.result).to.eql(new anchor.BN(5))
 })
-
+  //Another test step - test out addition
+  it('Addition',async () => {
+    await program.methods.add(new anchor.BN(2), new anchor.BN(3))
+    .accounts({
+        calculator: calculatorPair.publicKey,
+    })
+    .rpc()
+    const account = await program.account.calculator.fetch(calculatorPair.publicKey)
+    expect(account.result).to.eql(new anchor.BN(5))
+})
+  //Another test step - test out subtraction
+  it('Subtraction',async () => {
+    await program.methods.subtract(new anchor.BN(2), new anchor.BN(3))
+    .accounts({
+        calculator: calculatorPair.publicKey,
+    })
+    .rpc()
+    const account = await program.account.calculator.fetch(calculatorPair.publicKey)
+    expect(account.result).to.eql(new anchor.BN(5))
+})
+  //Another test step - test out multiplication
+  it('Multiplication',async () => {
+    await program.methods.multiply(new anchor.BN(2), new anchor.BN(3))
+    .accounts({
+        calculator: calculatorPair.publicKey,
+    })
+    .rpc()
+    const account = await program.account.calculator.fetch(calculatorPair.publicKey)
+    expect(account.result).to.eql(new anchor.BN(5))
+})
+  //Another test step - test out division
+  it('Division',async () => {
+    await program.methods.divide(new anchor.BN(2), new anchor.BN(3))
+    .accounts({
+        calculator: calculatorPair.publicKey,
+    })
+    .rpc()
+    const account = await program.account.calculator.fetch(calculatorPair.publicKey)
+    expect(account.result).to.eql(new anchor.BN(5))
+})
+  
 });
