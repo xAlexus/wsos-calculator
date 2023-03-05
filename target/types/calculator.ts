@@ -107,6 +107,26 @@ export type Calculator = {
           "type": "i128"
         }
       ]
+    },
+    {
+      "name": "power",
+      "accounts": [
+        {
+          "name": "calculator",
+          "isMut": true,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "num1",
+          "type": "i128"
+        },
+        {
+          "name": "num2",
+          "type": "i128"
+        }
+      ]
     }
   ],
   "accounts": [
@@ -221,6 +241,26 @@ export const IDL: Calculator = {
     },
     {
       "name": "divide",
+      "accounts": [
+        {
+          "name": "calculator",
+          "isMut": true,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "num1",
+          "type": "i128"
+        },
+        {
+          "name": "num2",
+          "type": "i128"
+        }
+      ]
+    },
+    {
+      "name": "power",
       "accounts": [
         {
           "name": "calculator",

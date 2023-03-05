@@ -107,6 +107,26 @@
           "type": "i128"
         }
       ]
+    },
+    {
+      "name": "power",
+      "accounts": [
+        {
+          "name": "calculator",
+          "isMut": true,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "num1",
+          "type": "i128"
+        },
+        {
+          "name": "num2",
+          "type": "i128"
+        }
+      ]
     }
   ],
   "accounts": [
@@ -126,8 +146,5 @@
         ]
       }
     }
-  ],
-  "metadata": {
-    "address": "CsQYgrrqQoSwBUQF8ro7aFJgzyhjpUymbiMBeRFiv4Db"
-  }
+  ]
 }

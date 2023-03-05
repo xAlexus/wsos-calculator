@@ -37,6 +37,11 @@ pub mod calculator {
         calculator.result = num1 / num2;
         Ok(())
     }
+    pub fn power(ctx: Context<Exponentiation>, num1: i128, num2: i128) -> ProgramResult {
+        let calculator = &mut ctx.accounts.calculator;
+        calculator.result = num1.pow(num2 as u32);
+        Ok(())
+        }
     
 }
 
@@ -74,7 +79,11 @@ pub struct Division<'info> {
     #[account(mut)]
     pub calculator: Account<'info, Calculator>,
 }
-
+#[derive(Accounts)]
+pub struct Exponentiation<'info> {
+    #[account(mut)]
+    pub calculator: Account<'info, Calculator>,
+}
 #[account]
 pub struct Calculator {
     greeting: String,
